@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Класів Лишків</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Калькулятор Класів Лишків (mod m)</h2>
+        
+        <div class="input-group">
+            <label for="modulus-m">Модуль m:</label>
+            <input type="number" id="modulus-m" value="7" min="1">
+        </div>
+
+        <div class="input-group">
+            <label for="operand-a">Операнд a:</label>
+            <input type="number" id="operand-a">
+        </div>
+
+        <div class="input-group">
+            <label for="operand-b">Операнд b:</label>
+            <input type="number" id="operand-b">
+        </div>
+
+        <div class="operations-grid">
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('power')">^</button>
+            <button onclick="calculate('divide')">/</button>
+            
+            <button onclick="calculate('reverse_add')">-a</button>
+            <button onclick="calculate('mod_inverse')">1/a</button>
+            <button onclick="clearFields()" class="clear-btn">CLEAR</button>
+        </div>
+
+        <div class="result-display">
+            <label for="result-c">Результат c (mod m):</label>
+            <input type="text" id="result-c" value="---" readonly>
+        </div>
+        
+        <div id="error-message" class="error-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
