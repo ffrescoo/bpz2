@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор Класів Лишків</title>
+    <title>Калькулятор Класів Залишків (ЛР3)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator-container">
-        <h2>Калькулятор Класів залишків (mod m)</h2>
+        <h2>Калькулятор Класів Лишків та Ейлера</h2>
         <div class="developer-info">
-            Розробник: Котенко Дмитро
+            Розробник: Прізвище Студента
         </div>
-        
+
         <div class="input-group">
             <label for="modulus-m">Модуль m:</label>
             <input type="number" id="modulus-m" value="7" min="1">
         </div>
 
         <div class="input-group">
-            <label for="operand-a">Операнд a:</label>
+            <label for="operand-a">Операнд a (або N/Межа А):</label>
             <input type="number" id="operand-a">
         </div>
 
         <div class="input-group">
-            <label for="operand-b">Операнд b:</label>
+            <label for="operand-b">Операнд b (або d):</label>
             <input type="number" id="operand-b">
         </div>
 
@@ -35,13 +35,12 @@
             <button onclick="calculate('power')">^</button>
             <button onclick="calculate('divide')">/</button>
             
-            <button onclick="calculate('reverse_add')">-a</button>
-            <button onclick="calculate('mod_inverse')">1/a</button>
-            <button onclick="clearFields()" class="clear-btn">CLEAR</button>
+            <button onclick="calculate('gcd')">НОД</button> <button onclick="calculate('phi')">ϕ(N)</button> <button onclick="calculate('isPrime')">p?</button> <button onclick="calculate('genPrime')">Gen P</button> <button onclick="calculate('euler_inverse')">a⁻¹(E)</button> <button onclick="calculate('rev_add')">-a</button> 
+            <button onclick="calculate('mod_inverse')">a⁻¹(Ев)</button> <button onclick="clearFields()" class="clear-btn">CLEAR</button>
         </div>
 
         <div class="result-display">
-            <label for="result-c">Результат c (mod m):</label>
+            <label for="result-c">Результат c:</label>
             <input type="text" id="result-c" value="---" readonly>
         </div>
         
